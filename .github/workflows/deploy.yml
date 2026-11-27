@@ -14,7 +14,10 @@ jobs:
     container: node
     env:
       MONGODB_CONNECTION_PROTOCOL: mongodb
-      MONGODB_CLUSTER_ADDRESS: mongodb #ref line 22
+      #MONGODB_CLUSTER_ADDRESS: mongodb #ref line 25 under services
+      # MONGODB_CLUSTER_ADDRESS: mongodb
+      #if the container is greyed out then use ip address 
+      MONGODB_CLUSTER_ADDRESS: 127.0.0.1:27017
       MONGODB_USERNAME: root
       MONGODB_PASSWORD: example
       PORT: 8080
